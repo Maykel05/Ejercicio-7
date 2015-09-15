@@ -1,9 +1,11 @@
 module ArrayUtils
 	def self.array_max (param_array)
-		max = param_array[0]
+
+		max = param_array.first
 
 		param_array.each do |element|
-			element > max ? max=element
+			max = element unless element < max
+
 		end
 
 		max
